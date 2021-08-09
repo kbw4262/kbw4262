@@ -3,6 +3,9 @@ package KBW_test;
 import java.util.Scanner;
 
 public class Div {
+	Div(){
+		
+	}
 	public static String DivGet(double a,double b) {
 		double c = a/b;
 		return String.format("%.2f", c);
