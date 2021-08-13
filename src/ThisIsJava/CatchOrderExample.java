@@ -1,0 +1,23 @@
+package ThisIsJava;
+
+public class CatchOrderExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			String data1 = args[0];
+			String data2 = args[1];
+			int v1 = Integer.parseInt(data1);
+			int v2 = Integer.parseInt(data2);
+			int result = v1 + v2;
+			System.out.println(result);
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("실행 매개 값의 수가 부족합니다. ");
+		}catch(Exception e) {
+			System.out.println("실행에 문제가 있습니다");
+		}finally {
+			System.out.println("다시 실행하세요");
+		}
+	}
+
+}
