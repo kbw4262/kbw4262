@@ -11,7 +11,7 @@ public class AccountExample {
 		System.out.println("예금액 : "+ account.getBalance());
 		//출금하기
 		try {
-			account.withdraw(13000);	
+			account.withdraw(13000);	// 출금액 출력
 		}catch(BalanceInsufficientException e){
 			String message = e.getMessage();
 			System.out.println(message);
