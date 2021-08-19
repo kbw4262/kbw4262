@@ -7,7 +7,7 @@ public class Car {
 	int speed;
 	
 	//»ý¼ºÀÚ
-	
+	public Car(){}
 	Car(String model){
 		this.model = model;
 	}

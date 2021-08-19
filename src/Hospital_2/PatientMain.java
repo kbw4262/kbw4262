@@ -1,12 +1,16 @@
-package Hospital;
+package Hospital_2;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class PatientMain {
 
+
+	public ArrayList<Patient> patient = new ArrayList<Patient>();
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Patient[] patient = new Patient[50];
+		ProgramMethod a = new ProgramMethod();
+		//Patient[] patient = new Patient[10];
 		int menu = 0;
 		Scanner sc = new Scanner(System.in);
 		int patientCount=0;//  입원중인 환자 수 초기화
@@ -14,7 +18,7 @@ public class PatientMain {
 		
 		do {
 			System.out.println("입원 관리 프로그램");
-			System.out.println("1. 환자 입원 수속 / 2. 입원 환자 조회 / 3. 입원 환자 정보 수정 / 4. 퇴원 수속 / 0. 끝내기");
+			System.out.println("1. 환자 입원 수속 / 2. 입원 환자 조회 / 3. 입원 환자 정보 수정 / 4. 퇴원 수속 / 5. 끝내기");
 			System.out.print("사용하실 기능에 해당하는 숫자를 입력하세요 : ");
 			try {
 				menu = sc.nextInt();
@@ -38,29 +42,35 @@ public class PatientMain {
 			
 				 */
 				//patientCount++;
+				a.add();
 				break;
 				
 			case 2:
 				// 환자 입원 조회
+				a.select();
 				break;
 				
 			case 3:
 				// 입원 환자 정보 수정
+				a.update();
 				break;
 				
 			case 4:
 				// 입원 환자 퇴원 
 				break;
+			case 5:
+				System.out.println("프로그램 종료합니다");
+				break;
 				
 			default : 
 					System.out.println("잘못 입력하셧습니다.");
 					System.out.println();
+					break;
 			}
 			
 			
-		}while(menu != 0);
+		}while(menu != 5);
 		
-		System.out.println("반복문 탈출됨");
 		
 		// 환자를 병실에 연결
 		
